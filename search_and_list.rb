@@ -6,6 +6,6 @@ GoogleSearch.paginate(ARGV.join(' ')) do |page,offset,links|
 	links.each_with_index do |link,i|
 		puts "[#{offset+i+1}]\n" +
 				"#{link.text}\n" +
-				"-- http://google.com#{link.href}\n"
+				"-- https://google.com#{link.href}\n"
 	end
 end

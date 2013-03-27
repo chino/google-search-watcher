@@ -8,7 +8,7 @@ class << self
 	def agent; @@agent; end
 
 	def search query, start_at_result = 0 # first link is 0 not 1
-		url = "http://google.com/search?q=#{query}&start=#{start_at_result}"
+		url = "https://google.com/search?q=#{query}&start=#{start_at_result}"
 		page = @@agent.get url
 		results = page.links.select{|l| l.href =~ %r{^/url\?q=} }
 		Backoff.decrease

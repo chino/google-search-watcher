@@ -45,7 +45,7 @@ class << self
 	class Backoff
 	class << self
 	
-		@@file = File.dirname __FILE__ + "/backoff.value"
+		@@file = File.dirname(__FILE__)+"/backoff.value"
 	
 		def get; File.read(@@file).chomp.to_i rescue 1 end
 	
